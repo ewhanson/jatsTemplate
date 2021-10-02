@@ -230,7 +230,7 @@ class JatsTemplatePlugin extends GenericPlugin {
 					'stageId' => WORKFLOW_STAGE_ID_PRODUCTION,
 				]
 			);
-			$layoutResponse .= "\t\t\t\t\t<custom-meta>\t\t\t\t\t\t<meta-name>production-ready-url</meta-name>\n\t\t\t\t\t\t<meta-value>" . htmlspecialchars($sourceFileUrl) . "</meta-value>\n\t\t\t\t\t</custom-meta>\n";
+			$layoutResponse .= "\t\t\t\t\t<custom-meta>\t\t\t\t\t\t<meta-name>production-ready-file-url</meta-name>\n\t\t\t\t\t\t<meta-value><ext-link ext-link-type=\"uri\" xlink:href=\"" . htmlspecialchars($sourceFileUrl) . "\"/></meta-value>\n\t\t\t\t\t</custom-meta>\n";
 		}
 		$layoutResponse .= "\t\t\t\t</custom-meta-group>";
 		if ($candidateFound) $response .= $layoutResponse;
